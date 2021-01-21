@@ -41,7 +41,7 @@
         var i ; var confirmed = 0;
         for (i = 0; i < locations.length; i++) {
             marker = new google.maps.Marker({
-                position: new google.maps.LatLng(locations[i][6], locations[i][7]),
+                position: new google.maps.LatLng(locations[i][5], locations[i][6]),
                 map: map,
                 icon :   red_icon,
                 html: document.getElementById('form')
@@ -50,18 +50,17 @@
             google.maps.event.addListener(marker, 'click', (function(marker, i) {
                 return function() {          
                     infowindow = new google.maps.InfoWindow();         
-					$("#id_paciente").val(locations[i][0]);
-					$("#nombres").val(locations[i][1]);
-					$("#apellidos").val(locations[i][2]);
-					$("#fecha_nacimiento").val(locations[i][3]);
-					$("#sexo").val(locations[i][4]);
-					$("#direccion").val(locations[i][5]);
-					$("#lat").val(locations[i][6]);
-					$("#lng").val(locations[i][7]);
-					$("#cedula").val(locations[i][8]);
-					$("#convencional").val(locations[i][9]);
-					$("#celular").val(locations[i][10]);
-					$("#correo").val(locations[i][11]);
+					$("#nombres").val(locations[i][0]);
+					$("#apellidos").val(locations[i][1]);
+					$("#fecha_nacimiento").val(locations[i][2]);
+					$("#sexo").val(locations[i][3]);
+					$("#direccion").val(locations[i][4]);
+					$("#lat").val(locations[i][5]);
+					$("#lng").val(locations[i][6]);
+					$("#cedula").val(locations[i][7]);
+					$("#convencional").val(locations[i][8]);
+					$("#celular").val(locations[i][9]);
+					$("#correo").val(locations[i][10]);
                     $("#form").show();
                     infowindow.setContent(marker.html);
                     infowindow.open(map, marker);

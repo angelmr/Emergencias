@@ -18,7 +18,7 @@
     $mail_contacto_emergencia = $_POST['mail_contacto_emergencia'];
    try {  
     $stmt = $conn->prepare("INSERT INTO gestion_pandemia(id_paciente, num_personas_vive, trabaja, institucion_trabaja, estudia, institucion_estudia, enfermedad, diabetes, sobrepeso, asegurado_IESS, nombre_contacto_emergencia, celular_contacto_emergencia, mail_contacto_emergencia) VALUE (?,?,?,?,?,?,?,?,?,?,?,?,?)");
-    $stmt->bind_param("iisssssssssss", $paciente, $num_personas_vive, $trabaja, $institucion_trabaja, $estudia, $institucion_estudia, $enfermedad, $diabetes, $sobrepeso, $asegurado_IESS, $nombre_contacto_emergencia, $celular_contacto_emergencia, $mail_contacto_emergencia);
+    $stmt->bind_param("sisssssssssss", $paciente, $num_personas_vive, $trabaja, $institucion_trabaja, $estudia, $institucion_estudia, $enfermedad, $diabetes, $sobrepeso, $asegurado_IESS, $nombre_contacto_emergencia, $celular_contacto_emergencia, $mail_contacto_emergencia);
     $stmt->execute();
     $id_registro = $stmt->insert_id;
     if($stmt->affected_rows){

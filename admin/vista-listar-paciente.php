@@ -52,7 +52,7 @@
                           <?php
 						  try {
 
-							$sql = "SELECT id_paciente,nombres, apellidos, fecha_nacimiento, sexo, direccion, lat, lng, cedula, convencional, celular, correo FROM paciente";
+							$sql = "SELECT nombres, apellidos, fecha_nacimiento, sexo, direccion, lat, lng, cedula, convencional, celular, correo FROM paciente";
                             $resultado = $conn->query($sql);  
 						  } catch (Exception $e) {
 							  $error = $e->getMessage();
@@ -72,7 +72,7 @@
 								<td><?php echo $paciente['celular']; ?></td>
                                 <td><?php echo $paciente['correo']; ?></td>
                                 <td>                                
-                                <a href="" data-id="<?php echo $paciente['id_paciente']?>" data-tipo="paciente" class="btn btn-danger borrar_registro">
+                                <a href="" data-id="<?php echo $paciente['cedula']?>" data-tipo="paciente" class="btn btn-danger borrar_registro">
                                     <i class="far fa-trash-alt"></i>
                                 </a>
                                 </td>

@@ -23,8 +23,8 @@ function add_location(){
     $correo = $_GET['correo'];
     // Inserts new row with place data.
     $query = sprintf("INSERT INTO paciente " .
-        " (id_paciente,nombres,apellidos,fecha_nacimiento,sexo,direccion, lat, lng, cedula,convencional,celular,correo ) " .
-        " VALUES (NULL, '%s', '%s', '%s','%s','%s','%s','%s','%s','%s','%s','%s');",
+        " (nombres,apellidos,fecha_nacimiento,sexo,direccion, lat, lng, cedula,convencional,celular,correo ) " .
+        " VALUES ('%s', '%s', '%s','%s','%s','%s','%s','%s','%s','%s','%s');",
         mysqli_real_escape_string($con,$nombres),
         mysqli_real_escape_string($con,$apellidos),
         mysqli_real_escape_string($con,$fecha_nacimiento),
@@ -48,8 +48,7 @@ function get_all_locations(){
         die('Not connected : ' . mysqli_connect_error());
     }
     // update location with location_status if admin location_status.
-    $sqldata = mysqli_query($con,"select id_paciente,nombres,apellidos,fecha_nacimiento,sexo,direccion,lat,lng,cedula,convencional,celular,correo from paciente");
-
+    $sqldata = mysqli_query($con,"select nombres,apellidos,fecha_nacimiento,sexo,direccion,lat,lng,cedula,convencional,celular,correo from paciente");
     $rows = array();
     while($r = mysqli_fetch_assoc($sqldata)) {
         $rows[] = $r;

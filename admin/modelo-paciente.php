@@ -42,7 +42,7 @@ die(json_encode($respuesta));
 if ($_POST['registro'] == 'eliminar'){
     $id_borrar = $_POST['id'];
     try {
-        $stmt = $conn->prepare('DELETE FROM paciente WHERE id_paciente= ?');
+        $stmt = $conn->prepare('DELETE FROM paciente WHERE cedula= ?');
         $stmt->bind_param('i', $id_borrar);
         $stmt->execute();
         if($stmt->affected_rows){

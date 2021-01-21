@@ -145,34 +145,34 @@
         var i ; var confirmed = 0;
         for (i = 0; i < locations.length; i++) {
             marker = new google.maps.Marker({
-                position: new google.maps.LatLng(locations[i][6], locations[i][7]),
+                position: new google.maps.LatLng(locations[i][5], locations[i][6]),
                 map: map,
                 icon :  purple_icon,
                 html: "<div>\n" +
                 "<table class=\"map1\">\n" +
                 "<tr>\n" +
                 "<td><a>Nombres:</a></td>\n" +
-                "<td><disabled id='nombres'>"+locations[i][1]+"</td></tr>\n" +
+                "<td><disabled id='nombres'>"+locations[i][0]+"</td></tr>\n" +
                 "<td><a>Apellidos:</a></td>\n" +
-                "<td><disabled id='apellidos'>"+locations[i][2]+"</td></tr>\n" +
+                "<td><disabled id='apellidos'>"+locations[i][1]+"</td></tr>\n" +
                 "<td><a>Fecha de nacimiento:</a></td>\n" +
-                "<td><disabled id='fecha_nacimiento' >"+locations[i][3]+"</td></tr>\n" +
+                "<td><disabled id='fecha_nacimiento' >"+locations[i][2]+"</td></tr>\n" +
                 "<td><a>Sexo:</a></td>\n" +
-                "<td><disabled id='sexo'>"+locations[i][4]+"</td></tr>\n" +
+                "<td><disabled id='sexo'>"+locations[i][3]+"</td></tr>\n" +
                 "<td><a>Dirección:</a></td>\n" +
-                "<td><disabled id='direccion'>"+locations[i][5]+"</td></tr>\n" +
+                "<td><disabled id='direccion'>"+locations[i][4]+"</td></tr>\n" +
                 "<td><a>Latitud:</a></td>\n" +
-                "<td><disabled id='lat'>"+locations[i][6]+"</td></tr>\n" +
+                "<td><disabled id='lat'>"+locations[i][5]+"</td></tr>\n" +
                 "<td><a>Longitud:</a></td>\n" +
-                "<td><disabled id='lng'>"+locations[i][7]+"</td></tr>\n" +
+                "<td><disabled id='lng'>"+locations[i][6]+"</td></tr>\n" +
                 "<td><a>Cédula:</a></td>\n" +
-                "<td><disabled id='cedula'>"+locations[i][8]+"</td></tr>\n" +
+                "<td><disabled id='cedula'>"+locations[i][7]+"</td></tr>\n" +
                 "<td><a>Convencional:</a></td>\n" +
-                "<td><disabled id='convencional'>"+locations[i][9]+"</td></tr>\n" +
+                "<td><disabled id='convencional'>"+locations[i][8]+"</td></tr>\n" +
                 "<td><a>Celular:</a></td>\n" +
-                "<td><disabled id='celular'>"+locations[i][10]+"</td></tr>\n" +
+                "<td><disabled id='celular'>"+locations[i][9]+"</td></tr>\n" +
                 "<td><a>Email:</a></td>\n" +
-                "<td><disabled id='correo'>"+locations[i][11]+"</td></tr>\n" +
+                "<td><disabled id='correo'>"+locations[i][10]+"</td></tr>\n" +
                 "</table>\n" +
                 "</div>"
             });

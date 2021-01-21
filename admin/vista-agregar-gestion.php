@@ -44,7 +44,7 @@
                                            $sql = "SELECT * FROM paciente";
                                            $resultado = $conn->query($sql);
                                            while($paciente = $resultado->fetch_assoc()) { ?>
-                                            <option value="<?php echo $paciente['id_paciente'] ?>">
+                                            <option value="<?php echo $paciente['cedula'] ?>">
                                              <?php echo $paciente['nombres']; ?> <?php echo $paciente['apellidos']; ?>
                                              </option>
                                            <?php } 
